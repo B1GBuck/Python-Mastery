@@ -1,0 +1,5 @@
+Python uses open() to work with files
+f.write() does not automatically add a newline
+CSV is one of the most common data formats to work with in Python
+JSON is the standard format for APIs and config files
+Python comes with a huge standard library to work with files and data formats
