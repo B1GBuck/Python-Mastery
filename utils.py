@@ -20,3 +20,8 @@ if __name__ == "__main__":
     print(is_valid_score(score))
     score = -5
     print(is_valid_score(score))
+
+if __name__ == "__main__":
+    module = "1.4"
+    duration_min = 40
+    #print(add_session(module, duration_min, note="No notes."))

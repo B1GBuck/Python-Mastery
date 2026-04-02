@@ -59,3 +59,14 @@ print(utils.format_currency(number)) #The result of this should be a number form
 
 score = 85
 print(utils.is_valid_score(score)) #This should print True or False if the score is in the range of (0 - 100)
+
+def save_sessions(filename, session_log):
+    with open(filename, "w") as f:
+        json.dump(session_log, f)
+
+def load_sessions(filename):
+    with open(filename, "r") as f:
+        if f in filename:
+            return json.load(f)
+        else:
+            return []
