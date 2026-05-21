@@ -28,6 +28,13 @@ class CustomOrder:
     def __eq__(self, other):
         return self.order_id == other.order_id
     
+    def __len__(self):
+        return self.quantity
+    
+    def __add__(self, other):
+        return (self.quantity * self.price) + (other.quantity * other.price)
+        
+    
     def apply_discount(self, percent):
         return float(self.price - (self.price * percent / 100))
     
@@ -74,10 +81,10 @@ print(order1 == order3)
 print(repr(order1))
 
 
-
-
-
-
+print(len(order1))
+print(len(order2))
+print(order1 + order2)
+print(order1 + order3)
 
 
 
