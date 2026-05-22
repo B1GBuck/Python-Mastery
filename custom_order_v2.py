@@ -33,6 +33,12 @@ class CustomOrder:
     
     def __add__(self, other):
         return (self.quantity * self.price) + (other.quantity * other.price)
+    
+    def __contains__(self, item):
+        return item == self.customer_name
+    
+    def __bool__(self):
+        return self.quantity > 0 and self.price > 0
         
     
     def apply_discount(self, percent):
@@ -86,7 +92,14 @@ print(len(order2))
 print(order1 + order2)
 print(order1 + order3)
 
+print("Dre" in order1)
+print("Tony" in order1)
 
+print(bool(order1))
+
+order4 = CustomOrder(458954908987, "Sammy", "Socks", 0, 0)
+
+print(bool(order4))
 
 
 
